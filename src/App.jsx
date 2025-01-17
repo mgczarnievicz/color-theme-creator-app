@@ -35,6 +35,13 @@ function App() {
 					/>
 				);
 			})}
+
+			{!colors.length && (
+				<>
+					<p>No colors</p>
+					<h2>Add more colors!</h2>
+				</>
+			)}
 		</>
 	);
 }
