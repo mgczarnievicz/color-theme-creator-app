@@ -18,12 +18,13 @@ export default function ColorForm({ onAddColor }) {
 		<form onSubmit={handleSubmit}>
 			<label htmlFor='role'>Role</label>
 			<input type='text' name='role' id='role' />
-			<label htmlFor='color'>Hexa</label>
 
+			<label htmlFor='hex'>Hexa</label>
 			<ColorInput name='hex' initColor={'#123456'} />
-			<label htmlFor='color'>Contract Text</label>
 
+			<label htmlFor='contrastText'>Contract Text</label>
 			<ColorInput name='contrastText' initColor={'#148491'} />
+
 			<button type='submit'>Add</button>
 		</form>
 	);
