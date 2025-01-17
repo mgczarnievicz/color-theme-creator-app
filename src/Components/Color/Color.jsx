@@ -4,6 +4,7 @@ import Delete from '../Delete/Delete';
 
 import './Color.css';
 import ColorForm from '../ColorForm/ColorForm';
+import CopyToClipboard from '../CopyToClipboard/CopyToClipboard';
 
 export default function Color({ color, onDeleteColor, onEditColor }) {
 	const [showDelete, setShowDelete] = useState(false);
@@ -34,6 +35,7 @@ export default function Color({ color, onDeleteColor, onEditColor }) {
 				color: color.contrastText,
 			}}>
 			<h3 className='color-card-highlight'>{color.hex}</h3>
+			<CopyToClipboard text={color.hex} />
 			<h4>{color.role}</h4>
 			<p>contrast: {color.contrastText}</p>
 			{showUpdate && (
