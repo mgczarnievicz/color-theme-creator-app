@@ -17,12 +17,23 @@ function App() {
 	function addColor(color) {
 		setColors([{ id: nanoid(), ...color }, ...colors]);
 	}
+
+	function deleteColor(id) {
+		const newColors = colors.filter((color) => color.id !== id);
+		setColors(newColors);
+	}
 	return (
 		<>
 			<h1>Theme Creator</h1>
 			<ColorForm onAddColor={addColor} />
 			{colors.map((color) => {
-				return <Color key={color.id} color={color} />;
+				return (
+					<Color
+						key={color.id}
+						color={color}
+						onDelete={deleteColor}
+					/>
+				);
 			})}
 		</>
 	);
