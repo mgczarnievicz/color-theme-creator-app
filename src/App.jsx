@@ -14,24 +14,33 @@ function App() {
 		console.log('Change colors', colors);
 	}, [colors]);
 
-	function addColor(color) {
-		setColors([{ id: nanoid(), ...color }, ...colors]);
+	function addColor(newColor) {
+		setColors([{ id: nanoid(), ...newColor }, ...colors]);
 	}
 
 	function deleteColor(id) {
 		const newColors = colors.filter((color) => color.id !== id);
 		setColors(newColors);
 	}
+	function editColor(updateColor) {
+		const newColors = colors.map((color) => {
+			if (color.id === updateColor.id) return updateColor;
+			else return color;
+		});
+
+		setColors(newColors);
+	}
 	return (
 		<>
 			<h1>Theme Creator</h1>
-			<ColorForm onAddColor={addColor} />
+			<ColorForm onSubmitColor={addColor} />
 			{colors.map((color) => {
 				return (
 					<Color
 						key={color.id}
 						color={color}
-						onDelete={deleteColor}
+						onDeleteColor={deleteColor}
+						onEditColor={editColor}
 					/>
 				);
 			})}

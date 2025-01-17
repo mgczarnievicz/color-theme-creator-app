@@ -3,7 +3,10 @@ import ColorInput from '../ColorInput/ColorInput';
 
 import './ColorForm.css';
 
-export default function ColorForm({ onAddColor }) {
+export default function ColorForm({
+	onSubmitColor,
+	initialColor = { role: '', hex: '#678967', contrastText: '#020202' },
+}) {
 	function handleSubmit(e) {
 		e.preventDefault();
 
@@ -11,21 +14,32 @@ export default function ColorForm({ onAddColor }) {
 		const data = Object.fromEntries(dataForm.entries());
 
 		console.log('Submit', data);
+		if (initialColor.id) {
+			data.id = initialColor.id;
+		}
 		e.target.reset();
-		onAddColor(data);
+		onSubmitColor(data);
 	}
 	return (
 		<form onSubmit={handleSubmit}>
 			<label htmlFor='role'>Role</label>
-			<input type='text' name='role' id='role' />
+			<input
+				type='text'
+				name='role'
+				id='role'
+				defaultValue={initialColor.role}
+			/>
 
 			<label htmlFor='hex'>Hexa</label>
-			<ColorInput name='hex' initColor={'#123456'} />
+			<ColorInput name='hex' initialColor={initialColor.hex} />
 
 			<label htmlFor='contrastText'>Contract Text</label>
-			<ColorInput name='contrastText' initColor={'#148491'} />
+			<ColorInput
+				name='contrastText'
+				initialColor={initialColor.contrastText}
+			/>
 
-			<button type='submit'>Add</button>
+			<button type='submit'>{initialColor.id ? 'Update' : 'Add'}</button>
 		</form>
 	);
 }
