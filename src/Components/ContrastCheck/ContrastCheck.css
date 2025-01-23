@@ -1,0 +1,15 @@
+.contrast-nope{
+    background-color: red;
+    color: white;
+}
+
+.contrast-yup{
+    background-color: green;
+    color: white;
+}
+
+.contrast-kinda{
+    background-color: yellow;
+    color: black;
+}
+

@@ -5,6 +5,7 @@ import Delete from '../Delete/Delete';
 import './Color.css';
 import ColorForm from '../ColorForm/ColorForm';
 import CopyToClipboard from '../CopyToClipboard/CopyToClipboard';
+import ContrastCheck from '../ContrastCheck/ContrastCheck';
 
 export default function Color({ color, onDeleteColor, onEditColor }) {
 	const [showDelete, setShowDelete] = useState(false);
@@ -44,6 +45,8 @@ export default function Color({ color, onDeleteColor, onEditColor }) {
 					onSubmitColor={handleUpdateColor}
 				/>
 			)}
+			<ContrastCheck color={color} />
+			
 			{!showDelete && (
 				<button onClick={handleToggleDelete}>DELETE</button>
 			)}
