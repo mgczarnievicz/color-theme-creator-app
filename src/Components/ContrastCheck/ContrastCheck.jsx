@@ -27,8 +27,8 @@ export default function ContrastCheck({ color }) {
 		checkContrast();
 	}, [color]);
 	return (
-		<h2 className={`contrast-${contrast.toLowerCase()}`}>
+		<h5 className={`contrast-${contrast.toLowerCase()}`}>
 			Overall Contrast Score: {contrast}
-		</h2>
+		</h5>
 	);
 }

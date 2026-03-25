@@ -1,4 +1,17 @@
+@import "./Variable.css";
+
 body {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   padding: 10px;
+  background-color: black;
+}
+
+
+#root {
+  width: 700px;
+  min-height: 100vh;
+  margin: auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 2px;
 }

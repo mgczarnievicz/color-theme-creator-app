@@ -16,7 +16,7 @@ export default function CopyToClipboard({ text }) {
 	};
 
 	return (
-		<button onClick={handleCopy}>
+		<button className='color-card__button' onClick={handleCopy}>
 			{copied ? 'SUCCESSFULLY COPIED!' : 'COPY'}
 		</button>
 	);
