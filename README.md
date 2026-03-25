@@ -1,94 +1,60 @@
-# Recap Project 4: Theme Creator
+# Color Theme Creator App 🎨
 
-## Getting Started with the GitHub Repository Template
+This repository contains the **reference solution** for the Color Theme Creator, a recap project from the Web Development Bootcamp at Spiced Academy.
 
-This template is designed to help you quickly start a new project with predefined issues and a GitHub project board. 
+The project is structured around a **GitHub Project Board** with predefined issues, designed to teach students how to break a feature into smaller tasks and work through them incrementally.
 
-> 💡 **Recommendation**: Read this entire guide carefully before executing the steps to ensure a smooth setup process.
+> 📋 The full setup instructions for creating your own version of this project can be found in [INSTRUCTIONS.md](./INSTRUCTIONS.md).
 
-### Step 1: Use the Template
+## Purpose
 
-Click on the "Use this template" button on the GitHub template repository page to create your new repository.
+The **Color Theme Creator** is designed to help students consolidate their React knowledge by building a practical, interactive app from scratch. Working through the predefined issues on the project board, students practice:
 
-### Step 2: Create a Personal Access Token
+1. **Breaking down a project**: Using GitHub Issues and a Project Board to plan and track work.
+2. **Component-based architecture**: Structuring the app into reusable React components.
+3. **State management**: Managing and sharing state across components.
+4. **User interaction**: Handling input events and reflecting changes in the UI in real time.
+5. **Dynamic styling**: Applying user-defined colors to the UI using React state and inline styles.
 
-1. **Navigate to Githubs Token Settings**:
-   [Create Access Token](https://github.com/settings/tokens)
-2. **Personal access token**: Click on "Generate new token (classic)".
-3. **Token settings**: Give your token a descriptive name, set the expiration as desired, and select the `repo` scope. This allows the token to access repositories.
+## Running the Project
 
-4. **Generate token**: Click "Generate token" at the bottom.
+1. Clone the repository.
 
-**Important:** Copy your new personal access token. You won’t be able to see it again!
+2. Install dependencies:
 
-> 💡 You can recreate your token at any time, so do not worry if you accidentally did not copy it
+    ```bash
+      npm install
+    ```
 
-### Step 3: Setup Environment Variables
+3. Start the development server:
 
-1. **Clone your repository**: Use `git clone` to clone your new repository to your local machine.
-2. **Create `.env` file**:
-   - Navigate to the root directory of your cloned repository.
-   - Use the command line to create a copy of the `.env.example` file:
-     ```bash
-     cp .env.example .env
-     ```
-   - Open the newly created `.env` file.
-   - Fill in your GitHub username, repository name, and the personal access token you created:
-     ```plaintext
-     GITHUB_TOKEN=your_personal_access_token_here
-     REPO_OWNER=your_github_username
-     REPO_NAME=your_repository_name
-     ```
-3. - **Check `.gitignore`**: Ensure that your `.env` file is listed in your `.gitignore` file to prevent it from being committed to your GitHub repository.
+    ```bash
+      npm run dev
+    ```
 
-> 🚨 If you accidentally pushed your access token to GitHub, make sure to regenerate or remove it as fast as possible! This potentially grants access to your GitHub account.
+4. Open [localhost:3000](http://localhost:3000) in your browser.
 
-<details>
-  <summary> 💡 What is a `.env` file?</summary>
+## Features
 
-In the `.env file`, you can define variables and their values, which the application will read at runtime. This approach helps keep sensitive information, such as API keys and database credentials, secure and separate from the application's source code.
+* 🎨 Create and customize a color theme
+* 🖌️ Live preview of the selected colors applied to the UI
+* ➕ Add, update, and remove colors from the theme
+* 📋 Organized development workflow via GitHub Issues and Project Board
 
-We need this file for our access token to ensure that the token remains private and is not hard-coded into the source code, protecting it from being exposed publicly.
-</details>
+## Technologies
 
-### Step 4: Run the Script to Create Issues
+![My Skills](https://skillicons.dev/icons?i=react,js,css)
 
-In the root directory of your repository, run the following command to install necessary dependencies and run the issue creation script:
+* **React** — Component-based UI
+* **JavaScript** — Application logic
+* **CSS** — Styling
 
-```bash
-npm install
-npm run create-issues
-```
+<!--
 
-> 💡 This script will automatically create predefined issues in your repository.
+## Preview
 
-🚨 Make sure to run `npm run create-issues` only once for your repository.
+![Color Theme Creator Preview](preview.png)
 
-✅ After creating the issues, you can revoke the token you created if you do not want to let it expire.
+Replace with your own screenshot or gif
 
-### Step 5: Create a GitHub Project Board
-
-1. **Go to your repository** on GitHub.
-2. **Click on "Projects"**: Find the "Projects" tab and click on it.
-3. **Create a new project**: Click "New project", name your project, and choose the "Board" template.
-
-### Step 6: Bulk Add Issues to the Project Board
-
-1. **Add issues**: Click on "Add item" in the "ToDo" column.
-2. **Select issues**: Click on the "+" and "Add item from repository".
-3. **Select repository**: Select your project.
-4. **Add to project**: Select all items and click "Add selected items".
-
-### Step 7: Deploy to Vercel
-1. **Go to Vercel**: Visit [Vercel](https://vercel.com/jessicaloers-projects) and sign up or log in.
-2. **Import your project**: Click on "New Project" and select your GitHub repository.
-
-### Step 8: Start working and have fun. 🌈
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-
+-->
