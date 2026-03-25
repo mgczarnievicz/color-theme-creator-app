@@ -49,12 +49,20 @@ The **Color Theme Creator** is designed to help students consolidate their React
 * **JavaScript** — Application logic
 * **CSS** — Styling
 
-<!--
-
 ## Preview
 
-![Color Theme Creator Preview](preview.png)
+### New Color
 
-Replace with your own screenshot or gif
+![Add new color](./previews/theme-creator-newcolor.gif)
 
--->
+### Update Color
+
+![Add new color](./previews/theme-creator-update.gif)
+
+### Delete Color
+
+![Add new color](./previews/theme-creator-delete.gif)
+
+### Copy Color
+
+![Add new color](./previews/theme-creator-copycolor.gif)

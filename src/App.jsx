@@ -1,7 +1,7 @@
 import { initialColors } from './lib/colors';
 
 import { nanoid } from 'nanoid';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import useLocalStorageState from 'use-local-storage-state';
 
 import Color from './Components/Color/Color';
@@ -13,9 +13,9 @@ function App() {
 		defaultValue: initialColors,
 	});
 
-	useEffect(() => {
-		console.log('Change colors', colors);
-	}, [colors]);
+	// useEffect(() => {
+	// 	console.log('Change colors', colors);
+	// }, [colors]);
 
 	function addColor(newColor) {
 		setColors([{ id: nanoid(), ...newColor }, ...colors]);
