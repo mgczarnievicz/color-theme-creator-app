@@ -14,12 +14,16 @@ export default function ColorForm({
 		const data = Object.fromEntries(dataForm.entries());
 
 		console.log('Submit', data);
+
 		if (initialColor.id) {
 			data.id = initialColor.id;
 		}
 		e.target.reset();
 		onSubmitColor(data);
 	}
+
+
+
 	return (
 		<form onSubmit={handleSubmit}>
 			<label htmlFor='role'>Role</label>
